@@ -1,0 +1,328 @@
+/* @media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 30px;
+    }
+    .main-buttons {
+        font-size: 20px;
+    }
+    .question-page {
+        font-size: 30px;
+    }
+    .question-page button {
+        font-size: 20px;
+        width: auto;
+        margin: 0 5px;
+    }
+    .buttons {
+        width: 400px;
+        justify-content: center;
+        align-content: center;
+    }
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.questionDiv {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#question {
+    color: #434343;
+}
+
+.starting-page {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    align-items: center;
+    font-size: 44px;
+    font-weight: 800;
+    color: #434343;
+}
+
+.starting-page>* {
+    padding: 30px 0;
+}
+
+#start-button, #high-score-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #7E48FF;
+    color: white;
+    border-radius: 15px;
+}
+
+#start-button:hover, #high-score-button:hover {
+    transform: scale(1.1);
+    background-color: #6829FF;
+}
+
+.starting-page-hidden {
+    display: none;
+}
+
+.question-page {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 44px;
+}
+
+/* you don't need individual hidden classes, you can use one to cover them all */
+
+.hidden {
+    display: none;
+}
+
+.question-page-hidden {
+    display: none;
+}
+
+.timer-score {
+    display: flex;
+    font-size: 44px;
+    margin: 60px 0;
+    justify-content: space-between;
+    width: 400px;
+}
+
+/* .timer-score * {
+    padding: 0 5px;
+    margin: 5px 15px;
+} */
+
+.time-score-quit {
+    margin-top: 60px;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #2D2D39;
+    align-items: center;
+}
+
+#score {
+    color: #EE8FFF;
+    justify-self: flex-start;
+}
+
+#timer {
+    color: #E5E172;
+}
+
+#quit {
+    font-size: 32px;
+    opacity: 0.85;
+}
+
+#quit:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.score-page-hidden {
+    display: none;
+}
+
+.score-page {
+    height: 400px;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 44px;
+    color: #434343;
+}
+
+.score-page>* {
+    margin: 20px 0;
+}
+
+.name-submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    color: #7E48FF;
+    user-select: none;
+}
+
+#score-submit {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #7E48FF;
+    color: white;
+    border-radius: 15px;
+    user-select: none;
+}
+
+#score-submit:hover {
+    transform: scale(1.1);
+    background-color: #6829FF;
+}
+
+:focus {
+    outline: #6829FF;
+    border-radius: 15px;
+}
+
+#fname {
+    height: 60px;
+    width: 400px;
+    font-size: 44px;
+    text-align: center;
+    border-radius: 15px;
+    border: solid 3px #434343;
+    color: #7E48FF;
+    user-select: none;
+}
+
+/* is this an accessibiltiy issue to hide the outline when a button is selected? can a screen reader still identify if it's there? */
+
+#fname:focus {
+    outline: #6829FF;
+    border-radius: 15px;
+}
+
+.buttons {
+    margin: 80px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+}
+
+.buttons>* {
+    padding: 20px;
+    width: 140px;
+    background-color: #7E48FF;
+    color: white;
+    border: none;
+    border-radius: 15px;
+}
+
+.buttons *:hover {
+    transform: scale(1.1);
+    background-color: #6829FF;
+}
+
+.buttons *:focus {
+    outline: #6829FF;
+    border-radius: 15px;
+}
+
+#quit {
+    border: none;
+    background-color: #FF4848;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+/* 
+.wrongAnswer, .correctAnswer {
+    border-radius: 15px;
+    width: 40px;
+} */
+
+.high-scores-hidden {
+    display: none;
+}
+
+.high-scores {
+    display: flex;
+    flex-direction: column;
+    font-size: 44px;
+    margin-top: 10vh;
+    color: #434343;
+}
+
+.scores-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.score-table {
+    display: flex;
+}
+
+table {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+thead {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+tbody {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+tbody>* {
+    margin: 5px 0;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+td {
+    text-align: center;
+}
+
+#play-again, #clear-scores {
+    padding: 20px;
+    width: 140px;
+    background-color: #7E48FF;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    width: auto;
+    margin: 5px 0;
+}
+
+#play-again:hover, #clear-scores:hover {
+    transform: scale(1.1);
+    background-color: #6829FF;
+}
+
+#play-again:focus, #clear-scores:focus {
+    outline: #6829FF;
+    border-radius: 15px;
+}
+
+@keyframes correctAnswerAnimation {
+    50% {
+        box-shadow: 0 -30px 32px rgb(0, 255, 153);
+    }
+}
+
+@keyframes wrongAnswerAnimation {
+    50% {
+        box-shadow: 0 -30px 32px rgb(236, 62, 62);
+    }
+}
+
+@keyframes clearAnimation {
+    50% {}
+}
