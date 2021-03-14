@@ -39,4 +39,4 @@ I've realised that writing clean and clear code is itself a skill that I do not 
 
 ![Image of the game's high score screen](/assets/images/Screen_four.png)
 
-[Link to site](ByteMyBits.github.io/javascript-maths-game)
+[Link to site](https://bytemybits.github.io/javascript-maths-game/)
